@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/imgCharacter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="27:20"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:lineSpacingExtra="4dp"
+            android:id="@+id/lblDescription"
+            android:clickable="true"
+            android:background="?selectableItemBackground"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/imgCharacter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:focusable="true" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:id="@+id/btnComic"
+        android:text="View expensivest comic"
+        style="@style/Widget.MaterialComponents.Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblDescription"
+        android:layout_margin="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
